@@ -2,8 +2,6 @@
 //  ContentView.swift
 //  ExpenseTracker
 //
-//  Created by Maksim on 7.05.26.
-//
 
 import SwiftUI
 
@@ -12,6 +10,11 @@ struct ContentView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
+                    // MARK: Title
+                    Text("Overview")
+                        .font(.title2)
+                        .bold()
+                }
                 .padding()
                 .frame(maxWidth: .infinity)
             }

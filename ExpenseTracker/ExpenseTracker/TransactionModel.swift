@@ -5,14 +5,14 @@
 
 import Foundation
 
-struct TransactionModel: Identifiable {
+struct Transaction: Identifiable {
     let id: Int
     let date: String
     let institution: String
     let account: String
     var merchant: String
     var amount: Double
-    let type: TransactionType.RawValue
+    let type: TransactionType
     var categoryId: Int
     var category: String
     var isPending: Bool

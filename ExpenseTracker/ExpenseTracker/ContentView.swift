@@ -15,6 +15,9 @@ struct ContentView: View {
                         .font(.title2)
                         .bold()
                     
+                    // MARK: Transaction List
+                    RecentTransactionList()
+                    
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
@@ -35,5 +38,12 @@ struct ContentView: View {
 }
 
 #Preview {
+    let transactionListViewModel: TransactionListViewModel = {
+        let viewModel = TransactionListViewModel()
+        viewModel.transactions = transactionListPreviewData
+        return viewModel
+    }()
+    
     ContentView()
+        .environmentObject(transactionListViewModel)
 }

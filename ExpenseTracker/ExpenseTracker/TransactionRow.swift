@@ -15,7 +15,7 @@ struct TransactionRow: View {
                 .fill(.icon.opacity(0.3))
                 .frame(width: 44, height: 44)
                 .overlay {
-                    Image(systemName: "desktopcomputer")
+                    Image(systemName: transaction.icon)
                         .font(Font.system(size: 20))
                         .foregroundStyle(.icon)
                 }

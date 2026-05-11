@@ -5,8 +5,10 @@
 
 import Foundation
 import Combine
+import Collections
+import OrderedCollections
 
-typealias TransactionGroup = [String: [Transaction]]
+typealias TransactionGroup = OrderedDictionary<String, [Transaction]>
 
 final class TransactionListViewModel: ObservableObject {
     @Published var transactions: [Transaction] = []
